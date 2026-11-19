@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Invitation Card</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #180307;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #080808;
+            width: 570px;
+            min-height: 870px;
+            border: 3px solid #d4af27;
+            border-radius: 23px;
+            padding: 45px;
+            box-shadow: 0 0 30px rgba(180, 30, 30, 0.2);
+        }
+
+        .companyname {
+            color: #d4af27;
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .para {
+            color: #dddddd;
+            font-size: 17px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .redLine {
+            border: 0;
+            height: 3px;
+            width: 120px;
+            background-color: #c8102e;
+            margin: 38px auto;
+        }
+
+        .circle {
+            background-color: #300b10;
+            border-radius: 50%;
+            height: 128px;
+            width: 128px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            color: #d4af27;
+            font-size: 48px;
+            font-weight: bold;
+            border: 3px solid #d4af27;
+        }
+
+        .name {
+            color: white;
+            font-size: 34px;
+            font-weight: bold;
+            margin-top: 22px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .java {
+            color: #ed1234;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .id {
+            width: fit-content;
+            display: block;
+            color: #d4af27;
+            font-size: 16px;
+            border: 1px solid #d4af27;
+            border-radius: 25px;
+            padding: 10px 22px;
+            margin: auto;
+            margin-bottom: 38px;
+        }
+
+        .card {
+            padding: 35px 25px;
+            border-top: 1px solid #9c1028;
+            border-bottom: 1px solid #9c1028;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .row {
+            margin-bottom: 18px;
+        }
+
+        .heading {
+            display: inline-block;
+            width: 115px;
+            color: #d4af27;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        span {
+            color: white;
+        }
+
+        .footer {
+            color: #d4af27;
+            font-size: 17px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 25px 18px;
+            }
+
+            .companyname {
+                font-size: 30px;
+            }
+
+            .name {
+                font-size: 25px;
+            }
+
+            .heading {
+                width: 95px;
+                font-size: 15px;
+            }
+
+            .row span:last-child {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="companyname">
+            ELVONIS
+        </div>
+
+        <div class="para">
+            PREMIUM BUSINESS SOLUTIONS
+        </div>
+
+        <div class="redLine"></div>
+
+        <div class="circle">BT</div>
+
+        <div class="name">
+            Bharath kumar Talluri
+        </div>
+
+        <div class="java">
+            JAVA DEVELOPER
+        </div>
+
+        <span class="id">
+            EMP ID : EVN-1024
+        </span>
+
+        <div class="card">
+
+            <div class="row">
+                <span class="heading">EMAIL</span>
+                <span>bharath@example.com</span>
+            </div>
+
+            <div class="row">
+                <span class="heading">PHONE</span>
+                <span>+91 7093******</span>
+            </div>
+
+            <div class="row">
+                <span class="heading">WEBSITE</span>
+                <span>www.elvonis.com</span>
+            </div>
+
+            <div class="row">
+                <span class="heading">LOCATION</span>
+                <span>Hyderabad, India</span>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            CONNECT • CREATE • GROW
+        </div>
+
+    </div>
+
+</body>
+</html>
