@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTORA - Fine Dining Restaurant</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0e0d;
+        }
+
+        main {
+            background-color: #0d0e0d;
+        }
+
+      
+
+        header {
+            background-color: black;
+            padding: 25px 40px;
+        }
+
+        .tastora {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tastora h1 {
+            letter-spacing: 3px;
+        }
+
+        .tastora span {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tastora span:hover {
+            color: gold;
+        }
+
+        button {
+            color: black;
+            background-color: gold;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+     
+
+        .WELCOME {
+            background-color: #1f0f2e;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .WELCOME h4 {
+            color: gold;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .WELCOME h1 {
+            color: white;
+            font-size: 40px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .WELCOME span {
+            color: #9f6ccc;
+        }
+
+        .WELCOME p {
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            line-height: 1.7;
+        }
+
+        .WELCOME h5 {
+            color: #a77ac9;
+            padding: 20px;
+            margin: 10px;
+        }
+
+      
+
+        .story {
+            background-color: #24202a;
+            padding: 60px 50px;
+        }
+
+        .story h5 {
+            color: gold;
+            margin-bottom: 15px;
+        }
+
+        .story h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .story p {
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            max-width: 750px;
+        }
+
+        .craft {
+            margin-top: 30px;
+            padding: 25px;
+            border: 1px solid gold;
+            text-align: center;
+        }
+
+        .craft h1 {
+            color: gold;
+            margin: 15px;
+        }
+
+        .craft h4 {
+            color: white;
+            margin: 15px;
+        }
+
+        .line {
+            background-color: gold;
+            height: 2px;
+            width: 100px;
+            margin: 20px auto;
+        }
+
+
+        .discover {
+            background-color: #0a0a0a;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .discover h3 {
+            color: gold;
+            margin: 10px;
+        }
+
+        .discover h1 {
+            color: white;
+            margin: 15px;
+        }
+
+        .discover p {
+            color: white;
+            margin: 15px;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin: 40px 20px;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .con1, .con2, .con3 {
+            background-color: #26202b;
+            border: 2px solid gold;
+            border-radius: 6px;
+            box-shadow: 4px 2px 2px gold;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .con1 h2, .con2 h2, .con3 h2 {
+            color: gold;
+            font-size: 30px;
+            margin: 10px;
+        }
+
+        .con1 h1, .con2 h1, .con3 h1 {
+            color: #782ac1;
+        }
+
+        .con1 p, .con2 p, .con3 p {
+            color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 12px 5px;
+            border-bottom: 1px solid #555;
+            gap: 10px;
+        }
+
+        .container button {
+            margin: 20px 0 5px;
+        }
+
+       
+
+        .collection {
+            background-color: #121110;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .collection h4 {
+            color: gold;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .collection h1 {
+            color: white;
+            margin: 10px;
+        }
+
+        .royal {
+            background-color: #1c1b1a;
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 10px;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .paneer {
+            border: 2px solid #a77ad1;
+            box-shadow: 2px 2px 2px #a77ad1;
+            margin: 10px;
+            padding: 25px;
+            flex: 1;
+        }
+
+        .paneer h1 {
+            color: #7c4ea7;
+            margin: 10px;
+        }
+
+        .paneer p {
+            color: white;
+            margin: 15px;
+            line-height: 1.6;
+        }
+
+        .paneer h2 {
+            color: gold;
+            margin: 10px;
+        }
+
+        /* WHY CHOOSE US */
+
+        .the {
+            background-color: #1c1b1a;
+            padding: 40px 20px;
+        }
+
+        .the h4 {
+            color: gold;
+            text-align: center;
+            margin: 10px;
+            padding-top: 10px;
+        }
+
+        .the h3 {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .quality {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            gap: 20px;
+        }
+
+        .food {
+            background-color: #2f2f44;
+            border: 1px solid #19191c;
+            border-bottom: 2px solid gold;
+            margin: 10px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .food h2 {
+            margin-top: 10px;
+            color: gold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .food h1 {
+            text-align: center;
+            color: blueviolet;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .food p {
+            margin-top: 15px;
+            color: white;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+      
+
+        .visit {
+            background-color: #3c3c80;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid gold;
+            border-bottom: 1px solid gold;
+        }
+
+        .visit h1 {
+            color: white;
+            padding: 10px;
+        }
+
+        .visit h5 {
+            color: #b1b1c5;
+            margin: 15px;
+        }
+
+        .visit h2 {
+            color: gold;
+        }
+
+       
+
+        .dining {
+            background-color: #080609;
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 1px solid #928e8e;
+        }
+
+        .logo h1 {
+            font-size: 45px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .logo h1 span {
+            color: #d6a83e;
+        }
+
+        .logo p {
+            color: #bd91ff;
+            font-size: 17px;
+            letter-spacing: 5px;
+            margin-top: 20px;
+        }
+
+        .footer-details {
+            margin-top: 40px;
+            gap: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .summary {
+            text-align: center;
+        }
+
+        .address {
+            color: #e5b52e;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .summary div:last-child {
+            color: #d9c9e8;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #080609;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 20px;
+            }
+
+            .tastora {
+                justify-content: center;
+            }
+
+            .tastora h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container,
+            .royal,
+            .quality,
+            .footer-details {
+                flex-direction: column;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .con1, .con2, .con3,
+            .paneer, .food {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .WELCOME h1 {
+                font-size: 28px;
+            }
+
+            .story {
+                padding: 40px 20px;
+            }
+
+            .logo h1 {
+                font-size: 35px;
+            }
+
+            .logo p {
+                font-size: 13px;
+                letter-spacing: 3px;
+            }
+
+            .footer-details {
+                gap: 30px;
+            }
+
+            .the h3 {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<main>
+
+  
+
+    <header>
+        <div class="tastora">
+
+            <h1>TASTORA</h1>
+
+            <span>Home</span>
+            <span>About</span>
+            <span>Our Menu</span>
+            <span>Specials</span>
+            <span>Contact</span>
+
+            <button>RESERVE A TABLE</button>
+
+        </div>
+    </header>
+
+   
+
+    <section class="WELCOME">
+
+        <h4>WELCOME TO TASTORA</h4>
+
+        <h1>
+            EXPERIENCE THE <br>
+            ART OF <span>FINE <br> DINING</span>
+        </h1>
+
+        <p>
+            Discover extraordinary flavors, elegant dining and
+            unforgettable moments crafted with passion.
+        </p>
+
+        <button>EXPLORE OUR MENU</button>
+
+        <h5>A PERFECT BLEND OF TASTE & ELEGANCE</h5>
+
+    </section>
+
+   
+
+    <section class="story">
+
+        <h5>OUR STORY</h5>
+
+        <h1>MORE THAN JUST A RESTAURANT</h1>
+
+        <p>
+            TASTORA is a destination for people who appreciate exceptional food and
+            beautiful dining experiences. Our passion for quality ingredients,
+            creative cooking and warm hospitality makes every visit memorable.
+        </p>
+
+        <button>DISCOVER MORE</button>
+
+        <div class="est">
+
+            <div class="craft">
+
+                <h1>EST. 2020</h1>
+
+                <h4>CRAFTED WITH PASSION</h4>
+
+                <div class="line"></div>
+
+                <h1>EXCELLENCE IN EVERY BITE</h1>
+
+            </div>
+
+        </div>
+
+    </section>
+
+   
+
+    <section class="discover">
+
+        <h3>DISCOVER OUR TASTE</h3>
+
+        <h1>OUR MENU</h1>
+
+        <p>
+            Carefully selected dishes prepared with passion and premium ingredients.
+        </p>
+
+        <div class="container">
+
+        
+
+            <div class="con1">
+
+                <h2>01</h2>
+
+                <h1>STARTERS</h1>
+
+                <p>Delicious beginnings to make your dining experience special.</p>
+
+                <div class="menu">
+                    <span>Paneer Tikka</span>
+                    <span>₹220</span>
+                </div>
+
+                <div class="menu">
+                    <span>Veg Spring Rolls</span>
+                    <span>₹180</span>
+                </div>
+
+                <div class="menu">
+                    <span>Cheese Balls</span>
+                    <span>₹200</span>
+                </div>
+
+                <button>VIEW DETAILS</button>
+
+            </div>
+
+          
+
+            <div class="con2">
+
+                <h2>02</h2>
+
+                <h1>MAIN COURSE</h1>
+
+                <p>Rich flavors and signature dishes made to perfection.</p>
+
+                <div class="menu">
+                    <span>Paneer Butter Masala</span>
+                    <span>₹280</span>
+                </div>
+
+                <div class="menu">
+                    <span>Veg Biryani</span>
+                    <span>₹250</span>
+                </div>
+
+                <div class="menu">
+                    <span>Special Thali</span>
+                    <span>₹320</span>
+                </div>
+
+                <button>VIEW DETAILS</button>
+
+            </div>
+
+           
+
+            <div class="con3">
+
+                <h2>03</h2>
+
+                <h1>DESSERTS</h1>
+
+                <p>Sweet creations that bring your dining experience to life.</p>
+
+                <div class="menu">
+                    <span>Chocolate Brownie</span>
+                    <span>₹160</span>
+                </div>
+
+                <div class="menu">
+                    <span>Gulab Jamun</span>
+                    <span>₹100</span>
+                </div>
+
+                <div class="menu">
+                    <span>Ice Cream</span>
+                    <span>₹120</span>
+                </div>
+
+                <button>VIEW DETAILS</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <section class="collection">
+
+        <h4>OUR SIGNATURE COLLECTION</h4>
+
+        <h1>CHEF'S SPECIALS</h1>
+
+        <div class="royal">
+
+            <div class="paneer">
+
+                <h1>ROYAL PANEER</h1>
+
+                <p>
+                    A rich and creamy paneer preparation with aromatic spices.
+                </p>
+
+                <h2>₹320</h2>
+
+            </div>
+
+            <div class="paneer">
+
+                <h1>TASTORA BIRYANI</h1>
+
+                <p>
+                    A flavorful rice preparation with carefully selected spices.
+                </p>
+
+                <h2>₹280</h2>
+
+            </div>
+
+            <div class="paneer">
+
+                <h1>GOLDEN DESSERT</h1>
+
+                <p>
+                    A delightful sweet creation for a perfect ending.
+                </p>
+
+                <h2>₹180</h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    <section class="the">
+
+        <h4>THE TASTORA EXPERIENCE</h4>
+
+        <h3>WHY CHOOSE US?</h3>
+
+        <div class="quality">
+
+            <div class="food">
+
+                <h2>01</h2>
+
+                <h1>QUALITY FOOD</h1>
+
+                <p>
+                    Fresh ingredients and carefully prepared dishes.
+                </p>
+
+            </div>
+
+            <div class="food">
+
+                <h2>02</h2>
+
+                <h1>EXCELLENT SERVICE</h1>
+
+                <p>
+                    Friendly hospitality and comfortable dining.
+                </p>
+
+            </div>
+
+            <div class="food">
+
+                <h2>03</h2>
+
+                <h1>PREMIUM AMBIENCE</h1>
+
+                <p>
+                    An elegant atmosphere for memorable moments.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+  
+
+    <section class="visit">
+
+        <h1>VISIT TASTORA</h1>
+
+        <h5>MONDAY - SUNDAY</h5>
+
+        <h2>11:00 AM - 11:00 PM</h2>
+
+        <h5>WE LOOK FORWARD TO SERVING YOU</h5>
+
+    </section>
+
+  
+
+    <section class="dining">
+
+        <div class="logo">
+
+            <h1>TASTORA<span>.</span></h1>
+
+            <p>THE ART OF FINE DINING</p>
+
+        </div>
+
+        <div class="footer-details">
+
+            <div class="summary">
+
+                <div class="address">ADDRESS</div>
+
+                <div>Luxury Dining Street, Hyderabad</div>
+
+            </div>
+
+            <div class="summary">
+
+                <div class="address">CONTACT</div>
+
+                <div>+91 98765 43210</div>
+
+            </div>
+
+            <div class="summary">
+
+                <div class="address">OPENING HOURS</div>
+
+                <div>11:00 AM - 11:00 PM</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    © 2026 TASTORA. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
